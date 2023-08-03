@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.cailangrott'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.mongodb', name: 'mongo-java-driver', version: '3.12.14'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
